@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Beach Yoga & Surf Club | Oceanfront Yoga Studio & Surf School in San Diego, CA</title>
+    <meta name="description" content="Pacific Beach Yoga & Surf Club — Premier oceanfront yoga studio & surf school in San Diego, CA. Oceanfront Vinyasa, Hot Power Flow, Sound Baths & Surf Lessons. Transparent pricing plans, verified reviews, and instant online booking.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pacific Beach Yoga & Surf Club | Oceanfront Yoga Studio & Surf School">
+    <meta property="og:description" content="Oceanfront Vinyasa, Hot Power Flow, Sound Baths & Surf Lessons in San Diego, CA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satwik92105-png.github.io/09-san-diego-coastal-surf-yoga/">
+    
+    <!-- Google Fonts: Editorial Sans + Grotesque Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Design Tokens from UI/UX Pro Max Architecture */
+            --color-primary: #0284c7;
+            --color-primary-light: #38bdf8;
+            --color-secondary: #14b8a6;
+            --color-bg: #0a151d;
+            --color-surface: #11212e;
+            --color-surface-hover: #193042;
+            --color-border: rgba(255, 255, 255, 0.08);
+            --color-border-glow: #0284c755;
+            --color-text: #f8fafc;
+            --color-text-muted: #94a3b8;
+            --color-accent: #0ea5e9;
+            --font-display: 'Outfit', -apple-system, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            --shadow-glow: 0 0 35px #0284c733;
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.15;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Live Status Bar */
+        .live-status-bar {
+            background: rgba(15, 23, 42, 0.85);
+            border-bottom: 1px solid var(--color-border);
+            padding: 9px 0;
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+            backdrop-filter: blur(12px);
+        }
+
+        .status-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .pulse-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #4ade80;
+            font-weight: 600;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-border);
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-header-cta {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: #090d16;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-glow);
+            transition: all 0.3s var(--ease-out);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-header-cta:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 100px 0 90px;
+            background: radial-gradient(circle at 85% 15%, #0284c718 0%, transparent 55%),
+                        radial-gradient(circle at 10% 80%, #14b8a614 0%, transparent 50%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-primary-light);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            letter-spacing: -0.03em;
+            margin-bottom: 22px;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, #ffffff 30%, var(--color-primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: var(--color-text-muted);
+            margin-bottom: 36px;
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        .hero-actions-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+        }
+
+        .btn-main-glow {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: #0b0f19;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 18px 36px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-glow);
+            transition: all 0.3s var(--ease-out);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-main-glow:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary-outline {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 18px 32px;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s var(--ease-out);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--color-primary);
+        }
+
+        .hero-social-proof {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 28px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .avatars-overlap {
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid var(--color-bg);
+            margin-left: -10px;
+            object-fit: cover;
+        }
+
+        .avatar-circle:first-child {
+            margin-left: 0;
+        }
+
+        .proof-text {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .proof-text strong {
+            color: #ffffff;
+        }
+
+        /* Hero Visual Frame */
+        .hero-visual-frame {
+            position: relative;
+        }
+
+        .hero-main-img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+        }
+
+        .floating-stat-card {
+            position: absolute;
+            bottom: -24px;
+            left: -24px;
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 20px 26px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .floating-stat-card .icon-chip {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Value Prop Bento */
+        .bento-bar {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            padding: 50px 0;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .bento-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .bento-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--color-primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .bento-title {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .bento-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+        }
+
+        /* Section Layouts */
+        .section-wrap {
+            padding: 110px 0;
+        }
+
+        .section-header-center {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 60px;
+        }
+
+        .sub-tag {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-main-title {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+        }
+
+        .section-sub-desc {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Filterable Services Catalog */
+        .catalog-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--color-primary);
+            color: #000;
+            border-color: var(--color-primary);
+        }
+
+        .services-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pro-service-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s var(--ease-out);
+            position: relative;
+        }
+
+        .pro-service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--color-border-glow);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .pro-service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .pro-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--color-text-muted);
+        }
+
+        .pro-price-tag {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--color-primary-light);
+        }
+
+        .pro-service-title {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .pro-service-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 28px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .pro-book-trigger {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--color-border);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .pro-book-trigger:hover {
+            background: var(--color-primary);
+            color: #000;
+            border-color: var(--color-primary);
+        }
+
+        /* Plans Section (Dynamic Pricing Switcher) */
+        .plans-bg-wrapper {
+            background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            padding: 110px 0;
+        }
+
+        .billing-toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .billing-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            cursor: pointer;
+        }
+
+        .billing-label.active {
+            color: #ffffff;
+        }
+
+        .switch-track {
+            width: 58px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .switch-track.annual-active {
+            background: var(--color-primary);
+        }
+
+        .switch-thumb {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .switch-track.annual-active .switch-thumb {
+            left: 30px;
+            background: #090d16;
+        }
+
+        .discount-pill {
+            background: rgba(34, 197, 94, 0.18);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            color: #4ade80;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        .plans-grid-3col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+            align-items: stretch;
+        }
+
+        .pro-plan-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            padding: 44px 36px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .pro-plan-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pro-plan-card.featured-plan {
+            background: var(--color-surface-hover);
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 20px 50px -10px #0284c738;
+        }
+
+        .popular-ribbon {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: #090d16;
+            font-weight: 800;
+            font-size: 0.72rem;
+            padding: 6px 18px;
+            border-radius: 50px;
+            letter-spacing: 1.5px;
+            white-space: nowrap;
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .plan-subtitle {
+            font-size: 0.88rem;
+            color: var(--color-text-muted);
+            margin-bottom: 24px;
+        }
+
+        .plan-pricing-box {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .plan-currency {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--color-primary-light);
+        }
+
+        .plan-amount {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1;
+            transition: all 0.3s ease;
+        }
+
+        .plan-cadence {
+            color: var(--color-text-muted);
+            font-size: 1rem;
+        }
+
+        .annual-savings-pill {
+            font-size: 0.8rem;
+            color: #4ade80;
+            font-weight: 600;
+            margin-bottom: 30px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            height: 18px;
+        }
+
+        .annual-savings-pill.visible {
+            opacity: 1;
+        }
+
+        .plan-feature-list {
+            list-style: none;
+            margin-bottom: 40px;
+            flex-grow: 1;
+        }
+
+        .plan-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .check-icon {
+            color: var(--color-primary-light);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .plan-action-btn {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--color-border);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .plan-action-btn.btn-highlight {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: #0b0f19;
+            border: none;
+        }
+
+        .plan-action-btn:hover {
+            background: var(--color-primary);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Reviews Section */
+        .reviews-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pro-review-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-stars-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .star-group {
+            display: flex;
+            gap: 3px;
+        }
+
+        .verified-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #4ade80;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 3px 8px;
+            border-radius: 50px;
+        }
+
+        .review-body {
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .reviewer-footer {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .reviewer-icon-bubble {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--color-primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+        }
+
+        .reviewer-name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .reviewer-location {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .faq-item.open {
+            border-color: var(--color-border-glow);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 28px;
+            text-align: left;
+            color: #ffffff;
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s var(--ease-out);
+            padding: 0 28px;
+            color: var(--color-text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            padding-bottom: 24px;
+        }
+
+        /* Location & Map Section */
+        .location-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            padding: 50px;
+            align-items: center;
+        }
+
+        .location-info-items {
+            list-style: none;
+            margin: 32px 0;
+        }
+
+        .location-info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .loc-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--color-primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .loc-label {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .loc-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Booking Modal Wizard */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(16px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background: #141c2c;
+            border: 1px solid var(--color-border-glow);
+            border-radius: var(--radius-xl);
+            max-width: 540px;
+            width: 100%;
+            padding: 44px;
+            position: relative;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            color: #94a3b8;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-step-title {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .modal-step-desc {
+            color: var(--color-text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 24px;
+        }
+
+        .modal-form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .modal-form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+        }
+
+        .modal-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .modal-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .slot-selector-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .slot-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--color-border);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .slot-btn.selected, .slot-btn:hover {
+            background: var(--color-primary);
+            color: #000;
+            border-color: var(--color-primary);
+        }
+
+        .modal-submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: #090d16;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-glow);
+            transition: all 0.3s var(--ease-out);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .modal-submit-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #090d16;
+            border-top: 1px solid var(--color-border);
+            padding: 70px 0 35px;
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+        }
+
+        .footer-cols {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-btm {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid, .location-grid-layout {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .services-grid-layout, .plans-grid-3col, .reviews-grid-layout, .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Live Status Top Bar -->
+    <div class="live-status-bar">
+        <div class="container status-bar-content">
+            <div class="pulse-indicator">
+                <span class="pulse-dot"></span>
+                <span>Open Today in San Diego, CA &bull; Mon-Sun: 6:00 AM – 8:30 PM</span>
+            </div>
+            <div>
+                <span>⭐ 4.9 ★ (410+ Reviews) &bull; </span>
+                <a href="tel:8584889642" style="color: #fff; font-weight: 600;">Call (858) 488-9642</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo-wrap">
+                <div class="logo-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                </div>
+                <span>Pacific <span style="color: var(--color-primary-light);">Beach Yoga & Surf Club</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Offerings</a></li>
+                <li><a href="#plans" class="nav-link">Plans & Pricing</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#faq" class="nav-link">FAQs</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button type="button" class="btn-header-cta" onclick="openBookingModal('General Booking', 'Free Inquiry')">
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Premier Oceanfront Yoga Studio & Surf School in San Diego, CA
+                </div>
+                <h1 class="hero-title">Experience <span class="gradient-text">Pacific</span> Beach Yoga & Surf Club</h1>
+                <p class="hero-desc">Oceanfront Vinyasa, Hot Power Flow, Sound Baths & Surf Lessons. Serving San Diego, CA residents with gold-standard craftsmanship, certified experts, and transparent pricing packages.</p>
+                <div class="hero-actions-row">
+                    <button type="button" class="btn-main-glow" onclick="document.getElementById('plans').scrollIntoView({behavior: 'smooth'})">
+                        Explore Plans & Rates
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                    </button>
+                    <a href="tel:8584889642" class="btn-secondary-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (858) 488-9642
+                    </a>
+                </div>
+                <div class="hero-social-proof">
+                    <div class="avatars-overlap">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client" class="avatar-circle">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client" class="avatar-circle">
+                        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&q=80" alt="Client" class="avatar-circle">
+                    </div>
+                    <div class="proof-text">
+                        <strong>4.9 / 5 Stars</strong> across 500+ verified Google & Yelp reviews
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual-frame">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80" alt="Pacific Beach Yoga & Surf Club" class="hero-main-img">
+                <div class="floating-stat-card">
+                    <div class="icon-chip">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div>
+                        <div style="font-weight: 800; font-size: 1.15rem;">Top Rated Experience</div>
+                        <div style="font-size: 0.85rem; color: var(--color-text-muted);">#1 in San Diego</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Value Props Bar -->
+    <div class="bento-bar">
+        <div class="container bento-grid">
+            <div class="bento-card">
+                <div class="bento-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                    <h4 class="bento-title">Licensed & Insured</h4>
+                    <p class="bento-desc">Full compliance and industry-certified experts for total peace of mind.</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                    <h4 class="bento-title">Transparent Rates</h4>
+                    <p class="bento-desc">Zero hidden surcharges or surprise fees. Clear upfront pricing.</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                    <h4 class="bento-title">Same-Day Booking</h4>
+                    <p class="bento-desc">Instant online confirmations with flexible appointment rescheduling.</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                    <h4 class="bento-title">100% Satisfaction</h4>
+                    <p class="bento-desc">Guaranteed results backed by our local customer satisfaction pledge.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filterable Catalog Section -->
+    <section class="section-wrap" id="services">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="sub-tag">OUR SERVICES & CATALOG</span>
+                <h2 class="section-main-title">Crafted with Perfection</h2>
+                <p class="section-sub-desc">Explore our signature offerings curated specifically for the discerning community in San Diego, CA.</p>
+            </div>
+            
+            <div class="catalog-tabs">
+                <button type="button" class="tab-btn active" onclick="filterServices('all', this)">All Offerings</button>
+                <button type="button" class="tab-btn" onclick="filterServices('signature', this)">Signature</button>
+                <button type="button" class="tab-btn" onclick="filterServices('popular', this)">Popular</button>
+                <button type="button" class="tab-btn" onclick="filterServices('premium', this)">Premium</button>
+            </div>
+
+            <div class="services-grid-layout" id="servicesGrid">
+                
+        <div class="pro-service-card" data-category="signature">
+            <div class="pro-service-header">
+                <span class="pro-tag">Signature</span>
+                <span class="pro-price-tag">$24.00</span>
+            </div>
+            <h3 class="pro-service-title">Oceanfront Sunset Vinyasa</h3>
+            <p class="pro-service-desc">Rooftop class overlooking Pacific Beach with ocean breeze and curated music.</p>
+            <div class="pro-service-footer">
+                <button type="button" class="pro-book-trigger" onclick="openBookingModal('Oceanfront Sunset Vinyasa', '$24.00')">
+                    <span>Reserve Spot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-service-card" data-category="popular">
+            <div class="pro-service-header">
+                <span class="pro-tag">Popular</span>
+                <span class="pro-price-tag">$26.00</span>
+            </div>
+            <h3 class="pro-service-title">Infrared Hot Power Flow</h3>
+            <p class="pro-service-desc">Detoxifying 60-min heated vinyasa set to 95 degrees with calming lavender mist.</p>
+            <div class="pro-service-footer">
+                <button type="button" class="pro-book-trigger" onclick="openBookingModal('Infrared Hot Power Flow', '$26.00')">
+                    <span>Reserve Spot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-service-card" data-category="premium">
+            <div class="pro-service-header">
+                <span class="pro-tag">Premium</span>
+                <span class="pro-price-tag">$85.00</span>
+            </div>
+            <h3 class="pro-service-title">Beginner Surf & Paddle Clinic</h3>
+            <p class="pro-service-desc">2-hour certified coaching with wetsuit and foam surfboard provided.</p>
+            <div class="pro-service-footer">
+                <button type="button" class="pro-book-trigger" onclick="openBookingModal('Beginner Surf & Paddle Clinic', '$85.00')">
+                    <span>Reserve Spot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-service-card" data-category="essential">
+            <div class="pro-service-header">
+                <span class="pro-tag">Essential</span>
+                <span class="pro-price-tag">$35.00</span>
+            </div>
+            <h3 class="pro-service-title">Full Moon Tibetan Sound Bath</h3>
+            <p class="pro-service-desc">Restorative crystal singing bowl meditation and guided breathwork session.</p>
+            <div class="pro-service-footer">
+                <button type="button" class="pro-book-trigger" onclick="openBookingModal('Full Moon Tibetan Sound Bath', '$35.00')">
+                    <span>Reserve Spot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-service-card" data-category="specialty">
+            <div class="pro-service-header">
+                <span class="pro-tag">Specialty</span>
+                <span class="pro-price-tag">$95.00</span>
+            </div>
+            <h3 class="pro-service-title">Private 1-on-1 Yoga Therapy</h3>
+            <p class="pro-service-desc">Personalized alignment, injury recovery and mindfulness instruction.</p>
+            <div class="pro-service-footer">
+                <button type="button" class="pro-book-trigger" onclick="openBookingModal('Private 1-on-1 Yoga Therapy', '$95.00')">
+                    <span>Reserve Spot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-service-card" data-category="express">
+            <div class="pro-service-header">
+                <span class="pro-tag">Express</span>
+                <span class="pro-price-tag">$149.00</span>
+            </div>
+            <h3 class="pro-service-title">Weekend Beach Retreat Day</h3>
+            <p class="pro-service-desc">Morning yoga, healthy acai bowl brunch, surf lesson and sunset meditation.</p>
+            <div class="pro-service-footer">
+                <button type="button" class="pro-book-trigger" onclick="openBookingModal('Weekend Beach Retreat Day', '$149.00')">
+                    <span>Reserve Spot</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans & Pricing Section with Interactive Monthly/Annual Switcher -->
+    <section class="plans-bg-wrapper" id="plans">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="sub-tag">PACKAGES & PLANS</span>
+                <h2 class="section-main-title">Transparent Membership Plans</h2>
+                <p class="section-sub-desc">Select a plan that aligns with your lifestyle. Switch to annual billing to unlock 20% savings.</p>
+            </div>
+
+            <div class="billing-toggle-container">
+                <span class="billing-label active" id="monthlyLabel" onclick="setBilling('monthly')">Monthly Billing</span>
+                <div class="switch-track" id="billingSwitch" onclick="toggleBilling()">
+                    <div class="switch-thumb"></div>
+                </div>
+                <span class="billing-label" id="annualLabel" onclick="setBilling('annual')">Annual Billing</span>
+                <span class="discount-pill">Save 20%</span>
+            </div>
+
+            <div class="plans-grid-3col">
+                
+        <div class="pro-plan-card ">
+            
+            <div class="plan-head">
+                <h3 class="plan-title">5-Class Flex Pass</h3>
+                <p class="plan-subtitle">Designed for San Diego, CA clients looking for consistent quality.</p>
+                <div class="plan-pricing-box">
+                    <span class="plan-currency">$</span>
+                    <span class="plan-amount" data-monthly="99" data-annual="79.20">99</span>
+                    <span class="plan-cadence">/ mo</span>
+                </div>
+                <div class="annual-savings-pill">Billed annually (Save 20%)</div>
+            </div>
+            <ul class="plan-feature-list">
+                
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>5 Any-Class Passes</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Valid for 90 Days</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Complimentary Manduka Mat Rental</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Bring a Friend Pass Included</span>
+            </li>
+            </ul>
+            <div class="plan-cta-wrap">
+                <button type="button" class="plan-action-btn " onclick="openBookingModal('Plan: 5-Class Flex Pass', '$99/mo')">
+                    Select 5-Class Flex Pass
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-plan-card featured-plan">
+            <div class="popular-ribbon"><span>RECOMMENDED CHOICE</span></div>
+            <div class="plan-head">
+                <h3 class="plan-title">Unlimited Flow Membership</h3>
+                <p class="plan-subtitle">Designed for San Diego, CA clients looking for consistent quality.</p>
+                <div class="plan-pricing-box">
+                    <span class="plan-currency">$</span>
+                    <span class="plan-amount" data-monthly="149" data-annual="119.20">149</span>
+                    <span class="plan-cadence">/ mo</span>
+                </div>
+                <div class="annual-savings-pill">Billed annually (Save 20%)</div>
+            </div>
+            <ul class="plan-feature-list">
+                
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Unlimited Studio & Rooftop Classes</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Free Mat & Towel Service Daily</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>15% Off Surf Lessons & Merch</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Access to Weekly Sound Baths</span>
+            </li>
+            </ul>
+            <div class="plan-cta-wrap">
+                <button type="button" class="plan-action-btn btn-highlight" onclick="openBookingModal('Plan: Unlimited Flow Membership', '$149/mo')">
+                    Select Unlimited Flow Membership
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="pro-plan-card ">
+            
+            <div class="plan-head">
+                <h3 class="plan-title">Surf & Soul Elite</h3>
+                <p class="plan-subtitle">Designed for San Diego, CA clients looking for consistent quality.</p>
+                <div class="plan-pricing-box">
+                    <span class="plan-currency">$</span>
+                    <span class="plan-amount" data-monthly="239" data-annual="191.20">239</span>
+                    <span class="plan-cadence">/ mo</span>
+                </div>
+                <div class="annual-savings-pill">Billed annually (Save 20%)</div>
+            </div>
+            <ul class="plan-feature-list">
+                
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Unlimited Yoga & Sound Baths</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>2 Monthly Private Surf Coaching Lessons</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Free Board & Wetsuit Rental Anytime</span>
+            </li>
+            <li class="plan-feature-item">
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>VIP Member Sunset Social Events</span>
+            </li>
+            </ul>
+            <div class="plan-cta-wrap">
+                <button type="button" class="plan-action-btn " onclick="openBookingModal('Plan: Surf & Soul Elite', '$239/mo')">
+                    Select Surf & Soul Elite
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section-wrap" id="reviews">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="sub-tag">COMMUNITY FEEDBACK</span>
+                <h2 class="section-main-title">Trusted by San Diego, CA Locals</h2>
+                <p class="section-sub-desc">Hear what our regular clients and community members have to say about Pacific Beach Yoga & Surf Club.</p>
+            </div>
+            <div class="reviews-grid-layout">
+                
+        <div class="pro-review-card">
+            <div class="review-stars-row">
+                <div class="star-group">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span class="verified-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Verified Customer
+                </span>
+            </div>
+            <p class="review-body">"Doing yoga on the oceanfront deck while the sun sets over the Pacific is magical. Soulful teachers and spotless studio."</p>
+            <div class="reviewer-footer">
+                <div class="reviewer-icon-bubble">M</div>
+                <div>
+                    <h4 class="reviewer-name">Maya Lindqvist</h4>
+                    <span class="reviewer-location">Pacific Beach SD</span>
+                </div>
+            </div>
+        </div>
+        <div class="pro-review-card">
+            <div class="review-stars-row">
+                <div class="star-group">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span class="verified-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Verified Customer
+                </span>
+            </div>
+            <p class="review-body">"Took their surf clinic as a total beginner. Up on my feet riding waves within 45 minutes!"</p>
+            <div class="reviewer-footer">
+                <div class="reviewer-icon-bubble">C</div>
+                <div>
+                    <h4 class="reviewer-name">Chad Morrison</h4>
+                    <span class="reviewer-location">Ocean Beach</span>
+                </div>
+            </div>
+        </div>
+        <div class="pro-review-card">
+            <div class="review-stars-row">
+                <div class="star-group">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span class="verified-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Verified Customer
+                </span>
+            </div>
+            <p class="review-body">"The hot power flow is intense in the best way. Super friendly community and great music."</p>
+            <div class="reviewer-footer">
+                <div class="reviewer-icon-bubble">C</div>
+                <div>
+                    <h4 class="reviewer-name">Chloe Bennett</h4>
+                    <span class="reviewer-location">Daily Yogi</span>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section-wrap" id="faq" style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="sub-tag">FREQUENTLY ASKED QUESTIONS</span>
+                <h2 class="section-main-title">Got Questions? We Have Answers</h2>
+                <p class="section-sub-desc">Everything you need to know before visiting or scheduling your service.</p>
+            </div>
+            <div class="faq-accordion">
+                
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span>How do appointments and online bookings work?</span>
+                <span class="faq-icon-wrap">
+                    <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <p>You can choose any service or package directly on this site and reserve your preferred date and time slot. Our team at Pacific Beach Yoga & Surf Club confirms bookings instantly via SMS and email within minutes.</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span>What is your cancellation and rescheduling policy?</span>
+                <span class="faq-icon-wrap">
+                    <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <p>We understand schedules change. We offer hassle-free rescheduling up to 24 hours prior to your scheduled appointment with zero penalty fees.</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span>Are there long-term commitments for membership plans?</span>
+                <span class="faq-icon-wrap">
+                    <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <p>No contracts or locking periods. All Pacific Beach Yoga & Surf Club monthly and annual packages can be paused, upgraded, or cancelled anytime with one click.</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span>Where are you located and is parking available?</span>
+                <span class="faq-icon-wrap">
+                    <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <p>We are conveniently located at 4520 Mission Blvd, San Diego, CA 92109 in San Diego, CA. Dedicated on-site client parking and wheelchair-accessible entry are provided.</p>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Directions -->
+    <section class="section-wrap" id="location">
+        <div class="container">
+            <div class="location-grid-layout">
+                <div>
+                    <span class="sub-tag">VISIT OUR STORE</span>
+                    <h2 class="section-main-title">Stop by or Get in Touch</h2>
+                    <p class="section-sub-desc">Conveniently located in the heart of San Diego, CA. Walk-ins welcome during operational hours.</p>
+                    <ul class="location-info-items">
+                        <li class="location-info-row">
+                            <div class="loc-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <div class="loc-label">Physical Address</div>
+                                <div class="loc-value">4520 Mission Blvd, San Diego, CA 92109</div>
+                            </div>
+                        </li>
+                        <li class="location-info-row">
+                            <div class="loc-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <div class="loc-label">Phone Hotline</div>
+                                <div class="loc-value"><a href="tel:8584889642">(858) 488-9642</a></div>
+                            </div>
+                        </li>
+                        <li class="location-info-row">
+                            <div class="loc-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <div class="loc-label">Hours of Operation</div>
+                                <div class="loc-value">Mon-Sun: 6:00 AM – 8:30 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="https://maps.google.com/?q=Pacific%20Beach%20Yoga%20%26%20Surf%20Club%204520%20Mission%20Blvd%2C%20San%20Diego%2C%20CA%2092109" target="_blank" rel="noopener" class="btn-secondary-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                        Get Driving Directions
+                    </a>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" alt="Pacific Beach Yoga & Surf Club Ambiance" style="width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <div>
+                    <div class="logo-wrap" style="margin-bottom: 16px;">
+                        <div class="logo-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                        </div>
+                        <span>Pacific Beach Yoga & Surf Club</span>
+                    </div>
+                    <p style="max-width: 340px; line-height: 1.6;">Delivering gold-standard oceanfront yoga studio & surf school for local patrons and families across San Diego, CA.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 18px;">Navigation</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="#services" class="nav-link">Featured Services</a></li>
+                        <li><a href="#plans" class="nav-link">Membership Plans</a></li>
+                        <li><a href="#reviews" class="nav-link">Customer Reviews</a></li>
+                        <li><a href="#faq" class="nav-link">Help & FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 18px;">Contact</h4>
+                    <p style="margin-bottom: 8px;">4520 Mission Blvd, San Diego, CA 92109</p>
+                    <p style="margin-bottom: 8px;">(858) 488-9642</p>
+                    <p>aloha@pbyogasurf.com</p>
+                </div>
+            </div>
+            <div class="footer-btm">
+                <p>&copy; 2026 Pacific Beach Yoga & Surf Club. All rights reserved.</p>
+                <p>Engineered for high conversion & local search domination.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive 3-Step Booking Modal Wizard -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" onclick="closeBookingModal()">&times;</button>
+            
+            <div id="wizardStep1">
+                <h3 class="modal-step-title">Reserve Your Spot</h3>
+                <p class="modal-step-desc">Confirm your selected service and pick a convenient time.</p>
+                
+                <div class="modal-form-group">
+                    <label class="modal-form-label">Selected Offering</label>
+                    <input type="text" id="modalServiceInput" class="modal-input" readonly>
+                </div>
+
+                <div class="modal-form-group">
+                    <label class="modal-form-label">Select Preferred Time of Day</label>
+                    <div class="slot-selector-grid">
+                        <button type="button" class="slot-btn selected" onclick="selectSlot(this)">Morning (9-12)</button>
+                        <button type="button" class="slot-btn" onclick="selectSlot(this)">Afternoon (1-4)</button>
+                        <button type="button" class="slot-btn" onclick="selectSlot(this)">Evening (5-8)</button>
+                    </div>
+                </div>
+
+                <div class="modal-form-group">
+                    <label class="modal-form-label">Full Name *</label>
+                    <input type="text" id="custName" class="modal-input" placeholder="Alex Morgan" required>
+                </div>
+
+                <div class="modal-form-group">
+                    <label class="modal-form-label">Phone Number *</label>
+                    <input type="tel" id="custPhone" class="modal-input" placeholder="(555) 000-0000" required>
+                </div>
+
+                <button type="button" class="modal-submit-btn" onclick="completeBooking()">
+                    Confirm & Reserve Spot
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </button>
+            </div>
+
+            <div id="wizardStepSuccess" style="display: none; text-align: center; padding: 20px 0;">
+                <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(34, 197, 94, 0.15); color: #22c55e; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Booking Confirmed!</h3>
+                <p style="color: var(--color-text-muted); margin-bottom: 20px;">Your reservation at Pacific Beach Yoga & Surf Club has been logged under reference <strong id="bookingRef" style="color: #fff;">#US-8492</strong>. A confirmation SMS has been dispatched.</p>
+                <button type="button" class="btn-main-glow" style="width: 100%; justify-content: center;" onclick="closeBookingModal()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Scripts -->
+    <script>
+        let isAnnual = false;
+
+        function toggleBilling() {
+            isAnnual = !isAnnual;
+            updateBillingUI();
+        }
+
+        function setBilling(mode) {
+            isAnnual = (mode === 'annual');
+            updateBillingUI();
+        }
+
+        function updateBillingUI() {
+            const switchTrack = document.getElementById('billingSwitch');
+            const monthlyLabel = document.getElementById('monthlyLabel');
+            const annualLabel = document.getElementById('annualLabel');
+            const savingsPills = document.querySelectorAll('.annual-savings-pill');
+            const priceAmounts = document.querySelectorAll('.plan-amount');
+
+            if (isAnnual) {
+                switchTrack.classList.add('annual-active');
+                monthlyLabel.classList.remove('active');
+                annualLabel.classList.add('active');
+                savingsPills.forEach(el => el.classList.add('visible'));
+                priceAmounts.forEach(el => {
+                    el.textContent = el.getAttribute('data-annual');
+                });
+            } else {
+                switchTrack.classList.remove('annual-active');
+                monthlyLabel.classList.add('active');
+                annualLabel.classList.remove('active');
+                savingsPills.forEach(el => el.classList.remove('visible'));
+                priceAmounts.forEach(el => {
+                    el.textContent = el.getAttribute('data-monthly');
+                });
+            }
+        }
+
+        function filterServices(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const cards = document.querySelectorAll('.pro-service-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleFaq(item) {
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('open');
+                el.querySelector('.faq-answer').style.maxHeight = null;
+            });
+            if (!wasOpen) {
+                item.classList.add('open');
+                const ans = item.querySelector('.faq-answer');
+                ans.style.maxHeight = ans.scrollHeight + "px";
+            }
+        }
+
+        function openBookingModal(serviceName, price) {
+            const modal = document.getElementById('bookingModal');
+            const input = document.getElementById('modalServiceInput');
+            document.getElementById('wizardStep1').style.display = 'block';
+            document.getElementById('wizardStepSuccess').style.display = 'none';
+            input.value = serviceName + (price ? ' (' + price + ')' : '');
+            modal.classList.add('active');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+        }
+
+        function selectSlot(btn) {
+            document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+
+        function completeBooking() {
+            const nameVal = document.getElementById('custName').value.trim();
+            const phoneVal = document.getElementById('custPhone').value.trim();
+            if (!nameVal || !phoneVal) {
+                alert('Please provide your name and phone number to confirm your reservation.');
+                return;
+            }
+            const randomRef = '#US-' + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('bookingRef').textContent = randomRef;
+            document.getElementById('wizardStep1').style.display = 'none';
+            document.getElementById('wizardStepSuccess').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
